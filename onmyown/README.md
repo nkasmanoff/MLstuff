@@ -1,0 +1,1 @@
+I tried to do a thing. Using NBA team stats and their respective rankings in them relative to the rest of the league, I tried to use them to predict that team's win loss %. Problems are they aren't exactly lined up, and I have no where near enough training data. 
