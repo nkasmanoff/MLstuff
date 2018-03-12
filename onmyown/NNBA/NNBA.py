@@ -1,9 +1,4 @@
-import pandas as pd
 import numpy as np
-#pd.set_option('display.max_colwidth', -1)
-#pd.set_option('display.max_columns', None)  
-from sklearn import preprocessing, cross_validation
-from sklearn.neural_network import MLPClassifier
 
 def make_network(FILENAME):
     from pandas import read_csv,get_dummies
@@ -102,25 +97,23 @@ def make_prediction_data(filename):
 	stats : array
 		Numpy array containing the stats in the proper order for game predictions. 
 	"""
-    from pandas import read_csv,get_dummies
-    import numpy as np
-    from sklearn import cross_validation
-    data = read_csv(filename)
-    #convert to per game stats and sort columns. 
-    data['ORB'] =  np.divide(data['ORB'].values,data['G'].values)
-    data['DRB'] =  np.divide(data['DRB'].values,data['G'].values)
-    data['TRB'] =  np.divide(data['TRB'].values,data['G'].values)
-    data['AST'] =  np.divide(data['AST'].values,data['G'].values)
-    data['STL'] =  np.divide(data['STL'].values,data['G'].values)
-    data['BLK'] =  np.divide(data['BLK'].values,data['G'].values)
-    data['TOV'] =  np.divide(data['TOV'].values,data['G'].values)
-    data['PF'] =  np.divide(data['PF'].values,data['G'].values)
-    teams  = data['Team']
-
-    data = data[['ORB' , 'DRB'  ,'TRB' ,  'AST' , 'PF' , 'STL' , 'TOV' , 'BLK' ,'3P%','FG%' ,'FT%']]
-    print("Here is every teams index value: ")
-    print(teams)
-    return teams,data
+	from pandas import read_csv,get_dummies
+	import numpy as np
+	from sklearn import cross_validation
+	data = read_csv(filename)
+	data['ORB'] =  np.divide(data['ORB'].values,data['G'].values)
+	data['DRB'] =  np.divide(data['DRB'].values,data['G'].values)
+	data['TRB'] =  np.divide(data['TRB'].values,data['G'].values)
+	data['AST'] =  np.divide(data['AST'].values,data['G'].values)
+	data['STL'] =  np.divide(data['STL'].values,data['G'].values)
+	data['BLK'] =  np.divide(data['BLK'].values,data['G'].values)
+	data['TOV'] =  np.divide(data['TOV'].values,data['G'].values)
+	data['PF'] =  np.divide(data['PF'].values,data['G'].values)
+	teams  = data['Team']
+	data = data[['ORB' , 'DRB'  ,'TRB' ,  'AST' , 'PF' , 'STL' , 'TOV' , 'BLK' ,'3P%','FG%' ,'FT%']]
+	print("Here is every teams index value: ")
+	print(teams)
+	return teams,data
 
 def game_maker(roadteam,hometeam):
     """After creating a properly formated table, this concats the desired teams so they can be predicted. 
