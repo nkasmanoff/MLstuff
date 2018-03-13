@@ -2,6 +2,6 @@ Contained in this respository is the python file containing the functions I use 
 
 
 
-Current record (3/12):
+Current record (3/13):
 
-8-6
+11-7
