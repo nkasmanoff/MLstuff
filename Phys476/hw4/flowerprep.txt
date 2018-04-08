@@ -1,0 +1,42 @@
+In order to prepare all these flowers to be sent through a  CNN to identify them:
+
+
+They are currently all in separate directories, under flowers/ w/ a sub folder for each.
+
+All the images are different lengths and widths. 
+
+ 
+ To make this into an ordinary ML training data set, a few things need to be done first.
+
+
+ All the images have to be in the same directory, using the typical X_train, X_test, y_train, y_test etc. 
+
+
+ Assign these labels as you go, make daisy's 1,0,0,.. etc. can do this after pushing all the type of flower into the directory making an array of the same length w/ the assigned class. Mash these all together.
+
+
+
+ Next after all the flowers are inside,  you need to find the best dimensions to use.
+
+
+ Finding the max length and width is already done, you could possibly rescale all the images to fit in one size, or we add a black space to fit all the pictures without rescaling
+
+
+Rescaling:
+Pros: 
+ Rescaling is easy
+Cons:
+ Messes up resolution, some pictures will definitely be ruined as a result
+
+Blackspace:
+Pros:
+ Image dimensions won't be ruined
+Cons:
+ Harder to do
+ CNN might pick the black space as a filter, causing issues when IDing
+
+
+ We should start w rescaling, and do the other next if it doesn't work.
+
+
+ 
