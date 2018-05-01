@@ -1,0 +1,32 @@
+476 Project:
+
+
+Using Data Science to leverage available NBA data to make predictions about the league. 
+
+
+
+
+What kinds of predictions?
+
+Game by game predictions
+Spreads
+
+
+Player predictions
+
+
+Season predictions
+
+Others?
+more in depth with stuff like shots, 
+
+What resources are available
+
+Box scores of every game from the last 2 seasons (via big data ball)	
+	Useful for game preds
+
+Basketball reference
+	Can download stats from here, plenty of available ones just have to brainstorm what
+
+NBA API 
+	Same as BR, brainstorm
